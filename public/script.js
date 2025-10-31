@@ -7,7 +7,7 @@ form.addEventListener('submit', async (e) => {
   const userText = input.value.trim();
   if (!userText) return;
 
-  // Mostrar mensaje del usuario
+  // Para mostrar mensaje del usuario
   appendUserMessage(userText);
   input.value = '';
 
@@ -15,7 +15,7 @@ form.addEventListener('submit', async (e) => {
   const loadingId = showLoadingMessage();
 
   try {
-    const res = await fetch('http://localhost:3000/api/ia', {
+    const res = await fetch('http://localhost:3000/agente', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userInput: userText, confirmExecution: true })
@@ -226,7 +226,7 @@ function scrollToBottom() {
   chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Manejar Enter y Shift+Enter
+// Manejar Enter 
 input.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' && !e.shiftKey) {
     e.preventDefault();

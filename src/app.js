@@ -20,16 +20,16 @@ app.use(cors({
 }));
 
 // Middleware para logging
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
   next();
-});
+});*/
 
 // Servir archivos estáticos
 app.use(express.static('public'));
 
 // Rutas
-app.use('/api/ia',agente);
+app.use('/agente',agente);
 
 // Ruta de prueba
 app.get('/', (req, res) => {
