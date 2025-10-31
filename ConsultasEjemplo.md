@@ -19,7 +19,7 @@ JOIN usuarios u ON r.id_usuario = u.id_usuario
 WHERE r.id_producto = 5;
 
 
---¿Cuántos usuarios activos hay?
+--  
 SELECT COUNT(*) AS total_usuarios_activos 
 FROM usuarios 
 WHERE activo = TRUE;
@@ -30,7 +30,7 @@ FROM productos
 ORDER BY precio DESC 
 LIMIT 5;
 
---Agrega un nuevo usuario llamado Ana López con correo ana@example.com y rol administrador.
+--Inserta un nuevo usuario llamado Ana López con correo ana@example.com y rol administrador.
 INSERT INTO usuarios (nombre, correo, contraseña, rol) 
 VALUES ('Ana López', 'ana@example.com', 'contraseña123', 'administrador');
 
@@ -43,7 +43,7 @@ WHERE id_pedido = 10;
 
 select * from pedidos
 
---Elimina el usuario con ID 12.
+--Eliminar el usuario con ID 12.
 DELETE FROM usuarios 
 WHERE id_usuario = 12;
 
@@ -86,3 +86,6 @@ JOIN productos prod ON dp.id_producto = prod.id_producto
 JOIN pedidos p ON dp.id_pedido = p.id_pedido;
 
 select * from usuarios
+
+
+Actualizar el estado del usuario ID 11 a activado
