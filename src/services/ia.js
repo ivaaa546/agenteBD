@@ -10,7 +10,7 @@ const ia = async (req, res) => {
 
   if (!userInput) return res.status(400).json({ error: "No se proporciona userInput" });
 
-  // 🔍 NUEVO: Detectar si es una consulta válida
+  // Detectar si es una consulta válida
   const sqlKeywords = [
     'select', 'insert', 'update', 'delete', 'mostrar', 'listar', 'buscar',
     'cuántos', 'cuantos', 'obtener', 'agregar', 'crear', 'eliminar', 
